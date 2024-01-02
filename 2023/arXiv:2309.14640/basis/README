@@ -1,0 +1,34 @@
+- AO basis functions are in "gth-cc-pvxz.dat":
+	- For H, O, and Al, these are taken from
+
+		https://github.com/hongzhouye/ccgto
+
+	- For Ti, correlated consistent basis sets were generated in the same
+	spirit.
+
+	- Tutorials on using these basis functions in PySCF and CP2K are provided
+	here:
+
+		https://github.com/hongzhouye/ccgto/tree/main/example
+
+- Fitting basis functions are in "gth-cc-pvxz-fit.dat". We only generated
+fitting functions for H, O, and Ti in this work.
+
+
+================
+
+- For Al2O3+water, we used the even-temperared basis functions (ETB) generated
+automatically by PySCF as the fitting basis. This can be done by initializing
+the Cell object with the customized AO basis sets from above and then
+
+	kmf = scf.KRHF(cell, kpts).rs_density_fit()
+
+or
+
+	kmf = scf.KRHF(cell, kpts).rs_density_fit(auxbasis=None)
+
+- For TiO2+water, we use the optimized fitting functions mentioned above by
+first loading them in the same way as to load the AO basis (see tutorials
+above) and then
+
+	kmf = scf.KRHF(cell, kpts).rs_density_fit(auxbasis=auxbasis)
