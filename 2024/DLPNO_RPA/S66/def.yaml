@@ -1,0 +1,687 @@
+--- !ruby/object:ProtocolDataset::DataSet
+#===============================================================================
+# Data set description
+#===============================================================================
+
+description: !ruby/object:ProtocolDataset::DataSetDescription
+  name: S66
+  references:
+    "10.1021/ct2002946": "ĹezĂˇÄŤ, J.; Riley, K. E.; Hobza, P. J. Chem. Theory Comput. 2011, 7, 2427-2438."
+    "10.1021/ct200523a": "ĹezĂˇÄŤ, J.; Riley, K. E.; Hobza, P. J. Chem. Theory Comput. 2011, 7, 3466-3470."
+  text: "CCSD(T)/CBS interaction energies in organic noncovalent complexes"
+  method_geometry: MP2/cc-pVTZ, intermolecular distance interpolated from CCSD(T)/CBS dissociation curve
+  method_energy: |
+    Composite CCSD(T)/CBS, CP-corrected, Helgaker extrapolation, frozen core:
+    HF/aug-cc-pVQZ
+    dMP2/aug-cc-pVTZ -> aug-cc-pVQZ
+    dCCSD(T)/heavy-aug-cc-pVDZ -> heavy-aug-cc-PVTZ
+  notes: The default interaction energies are taken from ref. 1; later it was found that more accurate results can be obtained without the extrapolation of the dCCSD(T) term (ref. 2). Such a benchmark is provided as an alternative reference.
+
+  geoms_with_metadata: yes
+
+  groups_by: by the type of the interaction
+  groups:
+    - H-bonds
+    - dispersion
+    - others
+
+  global_setup:
+    job: interaction
+    molecule_a:
+      selection: "auto"
+      charge: 0
+      multiplicity: 1
+    molecule_b:
+      selection: "auto"
+      charge: 0
+      multiplicity: 1
+
+#===============================================================================
+# Items
+#===============================================================================
+
+items:
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 01 Water ... Water
+  shortname: 01_Water-Water
+  geometry: S66:01
+  reference_value: -5.011
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 02 Water ... MeOH
+  shortname: 02_Water-MeOH
+  geometry: S66:02
+  reference_value: -5.701
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 03 Water ... MeNH2
+  shortname: 03_Water-MeNH2
+  geometry: S66:03
+  reference_value: -7.036
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 04 Water ... Peptide
+  shortname: 04_Water-Peptide
+  geometry: S66:04
+  reference_value: -8.22
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 05 MeOH ... MeOH
+  shortname: 05_MeOH-MeOH
+  geometry: S66:05
+  reference_value: -5.851
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 06 MeOH ... MeNH2
+  shortname: 06_MeOH-MeNH2
+  geometry: S66:06
+  reference_value: -7.666
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 07 MeOH ... Peptide
+  shortname: 07_MeOH-Peptide
+  geometry: S66:07
+  reference_value: -8.337
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 08 MeOH ... Water
+  shortname: 08_MeOH-Water
+  geometry: S66:08
+  reference_value: -5.087
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 09 MeNH2 ... MeOH
+  shortname: 09_MeNH2-MeOH
+  geometry: S66:09
+  reference_value: -3.113
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 10 MeNH2 ... MeNH2
+  shortname: 10_MeNH2-MeNH2
+  geometry: S66:10
+  reference_value: -4.223
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 11 MeNH2 ... Peptide
+  shortname: 11_MeNH2-Peptide
+  geometry: S66:11
+  reference_value: -5.48
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 12 MeNH2 ... Water
+  shortname: 12_MeNH2-Water
+  geometry: S66:12
+  reference_value: -7.402
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 13 Peptide ... MeOH
+  shortname: 13_Peptide-MeOH
+  geometry: S66:13
+  reference_value: -6.282
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 14 Peptide ... MeNH2
+  shortname: 14_Peptide-MeNH2
+  geometry: S66:14
+  reference_value: -7.561
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 15 Peptide ... Peptide
+  shortname: 15_Peptide-Peptide
+  geometry: S66:15
+  reference_value: -8.721
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 16 Peptide ... Water
+  shortname: 16_Peptide-Water
+  geometry: S66:16
+  reference_value: -5.199
+  setup: {}
+  group: H-bonds
+  tags: 1 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 17 Uracil ... Uracil (BP)
+  shortname: 17_Uracil-Uracil_BP
+  geometry: S66:17
+  reference_value: -17.448
+  setup: {}
+  group: H-bonds
+  tags: 2 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 18 Water ... Pyridine
+  shortname: 18_Water-Pyridine
+  geometry: S66:18
+  reference_value: -6.975
+  setup: {}
+  group: H-bonds
+  tags: 2 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 19 MeOH ... Pyridine
+  shortname: 19_MeOH-Pyridine
+  geometry: S66:19
+  reference_value: -7.51
+  setup: {}
+  group: H-bonds
+  tags: 2 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 20 AcOH ... AcOH
+  shortname: 20_AcOH-AcOH
+  geometry: S66:20
+  reference_value: -19.415
+  setup: {}
+  group: H-bonds
+  tags: 2 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 21 AcNH2 ... AcNH2
+  shortname: 21_AcNH2-AcNH2
+  geometry: S66:21
+  reference_value: -16.525
+  setup: {}
+  group: H-bonds
+  tags: 2 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 22 AcOH ... Uracil
+  shortname: 22_AcOH-Uracil
+  geometry: S66:22
+  reference_value: -19.783
+  setup: {}
+  group: H-bonds
+  tags: 2 H-bond
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 23 AcNH2 ... Uracil
+  shortname: 23_AcNH2-Uracil
+  geometry: S66:23
+  reference_value: -19.467
+  setup: {}
+  group: H-bonds
+  tags: 2 H-bond
+
+################################################################################
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 24 Benzene ... Benzene (pi-pi)
+  shortname: 24_Benzene-Benzene_pi-pi
+  geometry: S66:24
+  reference_value: -2.724
+  setup: {}
+  group: dispersion
+  tags: dispersion p-p
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 25 Pyridine ... Pyridine (pi-pi)
+  shortname: 25_Pyridine-Pyridine_pi-pi
+  geometry: S66:25
+  reference_value: -3.801
+  setup: {}
+  group: dispersion
+  tags: dispersion p-p
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 26 Uracil ... Uracil (pi-pi)
+  shortname: 26_Uracil-Uracil_pi-pi
+  geometry: S66:26
+  reference_value: -9.752
+  setup: {}
+  group: dispersion
+  tags: dispersion p-p
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 27 Benzene ... Pyridine (pi-pi)
+  shortname: 27_Benzene-Pyridine_pi-pi
+  geometry: S66:27
+  reference_value: -3.342
+  setup: {}
+  group: dispersion
+  tags: dispersion p-p
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 28 Benzene ... Uracil (pi-pi)
+  shortname: 28_Benzene-Uracil_pi-pi
+  geometry: S66:28
+  reference_value: -5.593
+  setup: {}
+  group: dispersion
+  tags: dispersion p-p
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 29 Pyridine ... Uracil (pi-pi)
+  shortname: 29_Pyridine-Uracil_pi-pi
+  geometry: S66:29
+  reference_value: -6.701
+  setup: {}
+  group: dispersion
+  tags: dispersion p-p
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 30 Benzene ... Ethene
+  shortname: 30_Benzene-Ethene
+  geometry: S66:30
+  reference_value: -1.364
+  setup: {}
+  group: dispersion
+  tags: dispersion p-p
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 31 Uracil ... Ethene
+  shortname: 31_Uracil-Ethene
+  geometry: S66:31
+  reference_value: -3.329
+  setup: {}
+  group: dispersion
+  tags: dispersion p-p
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 32 Uracil ... Ethyne
+  shortname: 32_Uracil-Ethyne
+  geometry: S66:32
+  reference_value: -3.693
+  setup: {}
+  group: dispersion
+  tags: dispersion p-p
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 33 Pyridine ... Ethene
+  shortname: 33_Pyridine-Ethene
+  geometry: S66:33
+  reference_value: -1.805
+  setup: {}
+  group: dispersion
+  tags: dispersion p-p
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 34 Pentane ... Pentane
+  shortname: 34_Pentane-Pentane
+  geometry: S66:34
+  reference_value: -3.764
+  setup: {}
+  group: dispersion
+  tags: dispersion a-a
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 35 Neopentane ... Pentane
+  shortname: 35_Neopentane-Pentane
+  geometry: S66:35
+  reference_value: -2.604
+  setup: {}
+  group: dispersion
+  tags: dispersion a-a
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 36 Neopentane ... Neopentane
+  shortname: 36_Neopentane-Neopentane
+  geometry: S66:36
+  reference_value: -1.764
+  setup: {}
+  group: dispersion
+  tags: dispersion a-a
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 37 Cyclopentane ... Neopentane
+  shortname: 37_Cyclopentane-Neopentane
+  geometry: S66:37
+  reference_value: -2.397
+  setup: {}
+  group: dispersion
+  tags: dispersion a-a
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 38 Cyclopentane ... Cyclopentane
+  shortname: 38_Cyclopentane-Cyclopentane
+  geometry: S66:38
+  reference_value: -2.986
+  setup: {}
+  group: dispersion
+  tags: dispersion a-a
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 39 Benzene ... Cyclopentane
+  shortname: 39_Benzene-Cyclopentane
+  geometry: S66:39
+  reference_value: -3.514
+  setup: {}
+  group: dispersion
+  tags: dispersion p-a
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 40 Benzene ... Neopentane
+  shortname: 40_Benzene-Neopentane
+  geometry: S66:40
+  reference_value: -2.849
+  setup: {}
+  group: dispersion
+  tags: dispersion p-a
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 41 Uracil ... Pentane
+  shortname: 41_Uracil-Pentane
+  geometry: S66:41
+  reference_value: -4.811
+  setup: {}
+  group: dispersion
+  tags: dispersion p-a
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 42 Uracil ... Cyclopentane
+  shortname: 42_Uracil-Cyclopentane
+  geometry: S66:42
+  reference_value: -4.091
+  setup: {}
+  group: dispersion
+  tags: dispersion p-a
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 43 Uracil ... Neopentane
+  shortname: 43_Uracil-Neopentane
+  geometry: S66:43
+  reference_value: -3.689
+  setup: {}
+  group: dispersion
+  tags: dispersion p-a
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 44 Ethene ... Pentane
+  shortname: 44_Ethene-Pentane
+  geometry: S66:44
+  reference_value: -1.993
+  setup: {}
+  group: dispersion
+  tags: dispersion p-a
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 45 Ethyne ... Pentane
+  shortname: 45_Ethyne-Pentane
+  geometry: S66:45
+  reference_value: -1.715
+  setup: {}
+  group: dispersion
+  tags: dispersion p-a
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 46 Peptide ... Pentane
+  shortname: 46_Peptide-Pentane
+  geometry: S66:46
+  reference_value: -4.256
+  setup: {}
+  group: dispersion
+  tags: dispersion p-a
+
+################################################################################
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 47 Benzene ... Benzene (TS)
+  shortname: 47_Benzene-Benzene_TS
+  geometry: S66:47
+  reference_value: -2.828
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 48 Pyridine ... Pyridine (TS)
+  shortname: 48_Pyridine-Pyridine_TS
+  geometry: S66:48
+  reference_value: -3.506
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 49 Benzene ... Pyridine (TS)
+  shortname: 49_Benzene-Pyridine_TS
+  geometry: S66:49
+  reference_value: -3.293
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 50 Benzene ... Ethyne (CH-pi)
+  shortname: 50_Benzene-Ethyne_CH-pi
+  geometry: S66:50
+  reference_value: -2.857
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 51 Ethyne ... Ethyne (TS)
+  shortname: 51_Ethyne-Ethyne_TS
+  geometry: S66:51
+  reference_value: -1.539
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 52 Benzene ... AcOH (OH-pi)
+  shortname: 52_Benzene-AcOH_OH-pi
+  geometry: S66:52
+  reference_value: -4.726
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 53 Benzene ... AcNH2 (NH-pi)
+  shortname: 53_Benzene-AcNH2_NH-pi
+  geometry: S66:53
+  reference_value: -4.405
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 54 Benzene ... Water (OH-pi)
+  shortname: 54_Benzene-Water_OH-pi
+  geometry: S66:54
+  reference_value: -3.288
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 55 Benzene ... MeOH (OH-pi)
+  shortname: 55_Benzene-MeOH_OH-pi
+  geometry: S66:55
+  reference_value: -4.168
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 56 Benzene ... MeNH2 (NH-pi)
+  shortname: 56_Benzene-MeNH2_NH-pi
+  geometry: S66:56
+  reference_value: -3.199
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 57 Benzene ... Peptide (NH-pi)
+  shortname: 57_Benzene-Peptide_NH-pi
+  geometry: S66:57
+  reference_value: -5.255
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 58 Pyridine ... Pyridine (CH-N)
+  shortname: 58_Pyridine-Pyridine_CH-N
+  geometry: S66:58
+  reference_value: -4.237
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 59 Ethyne ... Water (CH-O)
+  shortname: 59_Ethyne-Water_CH-O
+  geometry: S66:59
+  reference_value: -2.927
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 60 Ethyne ... AcOH (OH-pi)
+  shortname: 60_Ethyne-AcOH_OH-pi
+  geometry: S66:60
+  reference_value: -4.966
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 61 Pentane ... AcOH
+  shortname: 61_Pentane-AcOH
+  geometry: S66:61
+  reference_value: -2.906
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 62 Pentane ... AcNH2
+  shortname: 62_Pentane-AcNH2
+  geometry: S66:62
+  reference_value: -3.528
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 63 Benzene ... AcOH
+  shortname: 63_Benzene-AcOH
+  geometry: S66:63
+  reference_value: -3.747
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 64 Peptide ... Ethene
+  shortname: 64_Peptide-Ethene
+  geometry: S66:64
+  reference_value: -3.001
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 65 Pyridine ... Ethyne
+  shortname: 65_Pyridine-Ethyne
+  geometry: S66:65
+  reference_value: -4.104
+  setup: {}
+  group: others
+  tags: other
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: 66 MeNH2 ... Pyridine
+  shortname: 66_MeNH2-Pyridine
+  geometry: S66:66
+  reference_value: -3.966
+  setup: {}
+  group: others
+  tags: other
+
+#===============================================================================
+# Alternative data
+#===============================================================================
+
+best_reference: "CCSD(T)/CBS(haTZ)"
+
+alternative_reference:
+  # Best benchmark from the second paper with CCSD(T) correction not extrapolated
+  "CCSD(T)/CBS(haTZ)": !ruby/object:ProtocolDataset::DataSetReference
+    values: [-4.966, -5.653, -6.984, -8.169, -5.811, -7.619, -8.292, -5.052, -3.085, -4.193, -5.451, -7.347, -6.242, -7.517, -8.681, -5.167, -17.356, -6.931, -7.475, -19.301, -16.434, -19.681, -19.370, -2.758, -3.831, -9.771, -3.375, -5.628, -6.734, -1.388, -3.341, -3.707, -1.827, -3.749, -2.591, -1.756, -2.386, -2.977, -3.533, -2.863, -4.811, -4.098, -3.689, -1.988, -1.727, -4.243, -2.843, -3.513, -3.304, -2.860, -1.536, -4.715, -4.387, -3.277, -4.168, -3.204, -5.258, -4.205, -2.899, -4.933, -2.894, -3.516, -3.760, -2.995, -4.068, -3.963]
+    references:
+      "10.1021/ct200523a": "ĹezĂˇÄŤ, J.; Riley, K. E.; Hobza, P. J. Chem. Theory Comput. 2011, 7, 3466-3470."
+    method_energy: |
+      Composite CCSD(T)/CBS, CP-corrected, Helgaker extrapolation, frozen core:
+      HF/aug-cc-pVQZ
+      dMP2/aug-cc-pVTZ -> aug-cc-pVQZ
+      dCCSD(T)/heavy-aug-cc-PVTZ
+  # Helgaker extrapolation aTZ -> aQZ:
+  "MP2/CBS":  [-4.955, -5.694, -7.084, -8.071, -5.838, -7.727, -8.181, -5.031, -3.059, -4.290, -5.530, -7.520, -6.324, -7.682, -8.674, -5.148, -17.168, -7.069, -7.675, -19.000, -16.122, -19.401, -19.101, -4.703, -6.006, -11.139, -5.432, -7.535, -8.626, -2.325, -4.011, -4.409, -2.826, -3.968, -2.675, -1.737, -2.485, -3.137, -4.580, -3.599, -5.441, -4.698, -4.050, -2.151, -2.104, -4.513, -3.745, -4.390, -4.175, -3.463, -1.661, -5.250, -4.722, -3.567, -4.762, -3.843, -6.199, -4.367, -2.873, -5.029, -3.029, -3.657, -4.556, -3.168, -4.207, -4.552]
+  # MP2 as above, CCSD correction in the basis set listed:
+  "CCSD/CBS(aDZ)": [-4.751, -5.351, -6.595, -7.802, -5.449, -7.087, -7.789, -4.792, -2.777, -3.750, -4.891, -6.916, -5.778, -6.889, -8.030, -4.886, -16.288, -6.509, -6.928, -18.385, -15.598, -18.727, -18.441, -1.762, -2.770, -8.121, -2.337, -4.281, -5.405, -0.828, -2.681, -3.122, -1.234, -2.867, -1.970, -1.311, -1.783, -2.259, -2.669, -2.184, -3.655, -3.076, -2.869, -1.524, -1.341, -3.320, -2.239, -2.886, -2.704, -2.493, -1.371, -4.122, -3.843, -2.947, -3.604, -2.651, -4.460, -3.688, -2.731, -4.515, -2.242, -2.750, -3.097, -2.507, -3.720, -3.363]
+  # MP2 as above, CCSD correction in the basis set listed:
+  "CCSD/CBS(haTZ)": [-4.757, -5.358, -6.604, -7.804, -5.443, -7.066, -7.775, -4.789, -2.757, -3.716, -4.845, -6.918, -5.769, -6.867, -8.006, -4.890, -16.362, -6.519, -6.915, -18.484, -15.667, -18.814, -18.528, -1.587, -2.588, -7.898, -2.158, -4.044, -5.180, -0.707, -2.562, -3.010, -1.108, -2.741, -1.885, -1.251, -1.703, -2.160, -2.532, -2.082, -3.490, -2.923, -2.757, -1.450, -1.265, -3.188, -2.143, -2.798, -2.615, -2.444, -1.365, -4.044, -3.801, -2.886, -3.495, -2.546, -4.338, -3.697, -2.768, -4.509, -2.145, -2.645, -2.973, -2.445, -3.770, -3.276]
+  # MP2 as above, CCSD(T) correction in the basis set listed:
+  "CCSD(T)/CBS(aDZ)": [-4.918, -5.592, -6.908, -8.103, -5.757, -7.554, -8.230, -5.009, -3.059, -4.160, -5.419, -7.266, -6.187, -7.454, -8.630, -5.124, -17.182, -6.857, -7.410, -19.093, -16.265, -19.491, -19.189, -2.822, -3.895, -9.829, -3.439, -5.713, -6.819, -1.432, -3.380, -3.738, -1.872, -3.776, -2.613, -1.777, -2.404, -2.997, -3.575, -2.895, -4.848, -4.138, -3.712, -2.005, -1.748, -4.264, -2.876, -3.535, -3.331, -2.867, -1.524, -4.707, -4.361, -3.277, -4.188, -3.231, -5.282, -4.146, -2.850, -4.868, -2.912, -3.534, -3.801, -2.999, -3.991, -3.968]
+  # deltaCCSD(T) correction only
+  "dCCSD(T)/haTZ": [ -0.011, 0.041, 0.100, -0.098, 0.028, 0.108, -0.111, -0.021, -0.025, 0.098, 0.079, 0.173, 0.083, 0.164, -0.007, -0.019, -0.188, 0.137, 0.200, -0.302, -0.312, -0.280, -0.269, 1.945, 2.176, 1.369, 2.057, 1.908, 1.891, 0.937, 0.669, 0.702, 1.000, 0.219, 0.084, -0.019, 0.099, 0.160, 1.047, 0.735, 0.630, 0.601, 0.360, 0.163, 0.377, 0.270, 0.902, 0.876, 0.871, 0.603, 0.125, 0.535, 0.335, 0.290, 0.595, 0.639, 0.941, 0.162, -0.026, 0.095, 0.135, 0.141, 0.795, 0.172, 0.139, 0.588 ]
+  # DFT-D3
+  "B-LYP/def2-QZVP+D3(BJ)": [ -5.124, -5.697, -7.496, -8.001, -5.925, -8.068, -8.449, -5.186, -3.134, -4.135, -5.245, -7.545, -5.941, -7.645, -8.550, -4.940, -17.411, -7.578, -8.136, -19.489, -16.316, -19.727, -19.272, -3.292, -4.390, -10.276, -3.916, -5.946, -7.077, -1.561, -3.382, -3.686, -2.004, -3.854, -2.564, -1.743, -2.446, -3.155, -3.751, -2.876, -4.907, -4.222, -3.718, -2.000, -1.757, -4.171, -2.868, -3.496, -3.326, -2.788, -1.570, -4.391, -4.198, -3.441, -4.265, -3.257, -5.256, -3.773, -2.826, -4.881, -2.894, -3.541, -3.708, -2.912, -4.290, -4.014 ]
+  # MP2/aug-cc-pVTZ, Psi4, RI, noCP, 1e-8
+  "MP2/aTZ_noCP": [ -5.161, -5.964, -7.352, -8.404, -6.195, -8.120, -8.686, -5.291, -3.420, -4.648, -6.108, -7.811, -6.972, -8.354, -9.568, -5.578, -18.359, -7.513, -8.252, -19.732, -16.788, -20.348, -20.006, -5.915, -7.091, -13.244, -6.596, -9.278, -10.205, -2.898, -4.843, -5.035, -3.383, -5.165, -3.644, -2.526, -3.464, -4.208, -5.978, -4.813, -7.209, -6.364, -5.426, -2.750, -2.534, -5.809, -4.907, -5.313, -5.270, -4.304, -1.948, -6.328, -5.564, -4.218, -5.722, -4.738, -7.621, -5.021, -3.166, -5.416, -4.025, -4.673, -5.666, -3.761, -4.774, -5.198 ]
+  # MP2/aug-cc-pVQZ, Psi4, RI, noCP, 1e-8
+  "MP2/aQZ_noCP": [ -5.091, -5.863, -7.243, -8.286, -6.035, -7.920, -8.452, -5.184, -3.212, -4.438, -5.806, -7.679, -6.595, -7.944, -9.061, -5.326, -17.713, -7.325, -7.975, -19.487, -16.484, -19.909, -19.545, -5.150, -6.442, -12.043, -5.878, -8.213, -9.277, -2.552, -4.368, -4.685, -3.055, -4.439, -3.048, -2.029, -2.842, -3.535, -5.083, -4.033, -6.200, -5.388, -4.628, -2.399, -2.293, -5.046, -4.153, -4.757, -4.577, -3.774, -1.771, -5.656, -5.034, -3.826, -5.122, -4.163, -6.706, -4.652, -2.993, -5.211, -3.468, -4.096, -4.974, -3.430, -4.427, -4.820 ]
+  # MP2/CBS_noCP from aTZ,aQZ (using the previous two records)
+  "MP2/CBS_noCP": [ -5.045, -5.799, -7.191, -8.225, -5.937, -7.812, -8.319, -5.117, -3.084, -4.303, -5.622, -7.615, -6.373, -7.706, -8.771, -5.184, -17.382, -7.236, -7.831, -19.410, -16.324, -19.712, -19.314, -4.711, -6.087, -11.419, -5.475, -7.642, -8.784, -2.359, -4.113, -4.518, -2.874, -3.944, -2.643, -1.694, -2.427, -3.085, -4.538, -3.566, -5.618, -4.820, -4.170, -2.171, -2.154, -4.574, -3.712, -4.439, -4.180, -3.496, -1.691, -5.310, -4.742, -3.619, -4.800, -3.837, -6.189, -4.445, -2.917, -5.127, -3.156, -3.755, -4.601, -3.243, -4.270, -4.594 ]
+  # Original MP2 data
+  "MP2/aDZ": [ -4.386, -5.016, -6.306, -7.076, -5.160, -6.869, -7.183, -4.463, -2.637, -3.647, -4.741, -6.646, -5.607, -6.892, -7.758, -4.630, -15.396, -6.334, -6.913, -16.643, -14.406, -17.281, -17.233, -4.164, -5.366, -9.794, -4.840, -6.603, -7.658, -1.920, -3.398, -3.735, -2.395, -3.337, -2.225, -1.460, -2.058, -2.641, -4.000, -3.124, -4.585, -3.995, -3.478, -1.730, -1.723, -3.715, -3.258, -3.829, -3.641, -2.914, -1.345, -4.338, -4.066, -2.952, -3.995, -3.229, -5.397, -3.817, -2.529, -3.999, -2.435, -2.966, -3.865, -2.611, -3.784, -3.936 ]
+  "MP2/aTZ": [ -4.700, -5.393, -6.781, -7.678, -5.543, -7.394, -7.788, -4.781, -2.884, -4.071, -5.238, -7.186, -6.048, -7.385, -8.318, -4.937, -16.465, -6.784, -7.378, -18.091, -15.414, -18.584, -18.348, -4.515, -5.764, -10.658, -5.215, -7.213, -8.284, -2.187, -3.816, -4.199, -2.677, -3.787, -2.553, -1.663, -2.365, -2.994, -4.396, -3.453, -5.179, -4.480, -3.875, -2.028, -1.987, -4.278, -3.582, -4.185, -3.993, -3.302, -1.573, -4.981, -4.493, -3.371, -4.530, -3.655, -5.949, -4.163, -2.739, -4.734, -2.851, -3.446, -4.319, -2.981, -4.048, -4.327 ]
+  "MP2/aQZ": [ -4.863, -5.584, -6.961, -7.919, -5.731, -7.593, -8.033, -4.941, -2.994, -4.202, -5.415, -7.383, -6.218, -7.561, -8.537, -5.067, -16.905, -6.954, -7.556, -18.657, -15.859, -19.091, -18.815, -4.624, -5.904, -10.937, -5.340, -7.398, -8.480, -2.267, -3.928, -4.318, -2.764, -3.892, -2.625, -1.706, -2.436, -3.077, -4.503, -3.538, -5.330, -4.607, -3.976, -2.100, -2.054, -4.415, -3.676, -4.303, -4.098, -3.393, -1.625, -5.134, -4.624, -3.484, -4.664, -3.764, -6.092, -4.282, -2.821, -4.903, -2.954, -3.568, -4.456, -3.090, -4.143, -4.461 ]
+  # Jan M.L. Martin paper https://arxiv.org/abs/1712.09395
+  # Silver standard - consistent across set
+  # MP2-F12/aV{T,Q}Z-F12 half-CP + [CCSD(F12*)-MP2-F12]/aVTZ-F12 half-CP + [CCSD(T)-CCSD]/haV{D,T}Z half-CP
+  "JMLM_2017_Silver": [ -4.982, -5.666, -6.986, -8.183, -5.822, -7.617, -8.307, -5.064, -3.087, -4.184, -5.436, -7.349, -6.251, -7.516, -8.689, -5.180, -17.407, -6.927, -7.467, -19.361, -16.474, -19.736, -19.420, -2.685, -3.751, -9.672, -3.3, -5.517, -6.629, -1.358, -3.291, -3.651, -1.779, -3.741, -2.582, -1.745, -2.376, -2.967, -3.488, -2.824, -4.761, -4.052, -3.652, -1.973, -1.696, -4.215, -2.801, -3.472, -3.26, -2.828, -1.519, -4.691, -4.376, -3.267, -4.139, -3.174, -5.222, -4.189, -2.905, -4.917, -2.876, -3.491, -3.709, -2.967, -4.064, -3.93 ]
+  # Silver, replaced with Gold where available
+  # Gold is MP2-F12/aV{T,Q}Z-F12 half-CP + [CCSD(F12*)-MP2-F12]/cc-pVQZ-F12 half-CP + [CCSD(T)-CCSD]/haV{T,Q}Z half-CP
+  "JMLM_2017_SilverGold": [ -4.979, -5.666, -6.985, -8.183, -5.824, -7.625, -8.307, -5.065, -3.088, -4.189, -5.436, -7.354, -6.251, -7.516, -8.689, -5.180, -17.407, -6.927, -7.464, -19.364, -16.468, -19.736, -19.420, -2.685, -3.751, -9.672, -3.3, -5.517, -6.629, -1.348, -3.291, -3.651, -1.79, -3.741, -2.582, -1.745, -2.376, -2.967, -3.488, -2.824, -4.761, -4.052, -3.652, -1.973, -1.696, -4.215, -2.801, -3.472, -3.26, -2.839, -1.526, -4.691, -4.376, -3.267, -4.139, -3.174, -5.222, -4.189, -2.912, -4.925, -2.876, -3.491, -3.709, -2.967, -4.064, -3.93 ]

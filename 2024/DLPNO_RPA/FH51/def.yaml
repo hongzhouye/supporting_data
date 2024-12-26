@@ -1,0 +1,691 @@
+--- !ruby/object:ProtocolDataset::DataSet
+#===============================================================================
+# Data set description
+#===============================================================================
+
+description: !ruby/object:ProtocolDataset::DataSetDescription
+  name: GMTKN55_FH51
+  references:
+    "10.1021/jp045141s": "Y. Zhao, N. GonzĂˇlez-GarcĂ­a and D. G. Truhlar, J. Phys. Chem. A, 2005, 109, 2012-2018"
+    "10.1021/ct4008074": "J. Friedrich, J. HĂ¤nchen, J. Chem. Theory Comput., 2013, 9, 5381-5394"
+
+  text: "Reaction energies in various (in-)organic systems"
+  method_geometry: ""
+  method_energy: "CCSD(T)-F12/CBS"
+
+  global_setup:
+    job: reaction
+    reaction_print: []
+    calculation:
+      geometry_setup_from_file: yes
+
+#===============================================================================
+# Items
+#===============================================================================
+
+items:
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "1"
+  shortname: "1"
+  geometry: "gmtkn55_FH51:C6H12O"
+  reference_value: -150.81
+  setup:
+    reaction_formula: "1 g_C6H12O + 2 g_H2O2 -> 1 g_ethyl-g-butyrolactone + 3 g_H2O"
+    reaction_geometries:
+      g_C6H12O: gmtkn55_FH51:C6H12O
+      g_H2O2: gmtkn55_FH51:H2O2
+      g_ethyl-g-butyrolactone: gmtkn55_FH51:ethyl-g-butyrolactone
+      g_H2O: gmtkn55_FH51:H2O
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "2"
+  shortname: "2"
+  geometry: "gmtkn55_FH51:C4H9NH2"
+  reference_value: -144.38
+  setup:
+    reaction_formula: "1 g_C4H9NH2 + 3 g_H2O2 -> 1 g_C4H9NO2 + 4 g_H2O"
+    reaction_geometries:
+      g_C4H9NH2: gmtkn55_FH51:C4H9NH2
+      g_H2O2: gmtkn55_FH51:H2O2
+      g_C4H9NO2: gmtkn55_FH51:C4H9NO2
+      g_H2O: gmtkn55_FH51:H2O
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "3"
+  shortname: "3"
+  geometry: "gmtkn55_FH51:C4H9CHO"
+  reference_value: -89.35
+  setup:
+    reaction_formula: "1 g_C4H9CHO + 1 g_H2O2 -> 1 g_C4H9CO2H + 1 g_H2O"
+    reaction_geometries:
+      g_C4H9CHO: gmtkn55_FH51:C4H9CHO
+      g_H2O2: gmtkn55_FH51:H2O2
+      g_C4H9CO2H: gmtkn55_FH51:C4H9CO2H
+      g_H2O: gmtkn55_FH51:H2O
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "4"
+  shortname: "4"
+  geometry: "gmtkn55_FH51:C4H9SO2H"
+  reference_value: -82.55
+  setup:
+    reaction_formula: "1 g_C4H9SO2H + 1 g_H2O2 -> 1 g_C4H9SO3H + 1 g_H2O"
+    reaction_geometries:
+      g_C4H9SO2H: gmtkn55_FH51:C4H9SO2H
+      g_H2O2: gmtkn55_FH51:H2O2
+      g_C4H9SO3H: gmtkn55_FH51:C4H9SO3H
+      g_H2O: gmtkn55_FH51:H2O
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "5"
+  shortname: "5"
+  geometry: "gmtkn55_FH51:trans-2-pentene"
+  reference_value: -78.51
+  setup:
+    reaction_formula: "1 g_trans-2-pentene + 1 g_H2O2 -> 1 g_pentanediol"
+    reaction_geometries:
+      g_trans-2-pentene: gmtkn55_FH51:trans-2-pentene
+      g_H2O2: gmtkn55_FH51:H2O2
+      g_pentanediol: gmtkn55_FH51:pentanediol
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "6"
+  shortname: "6"
+  geometry: "gmtkn55_FH51:toluene"
+  reference_value: -66.96
+  setup:
+    reaction_formula: "1 g_toluene + 3 g_H2 -> 1 g_methylcyclohexane"
+    reaction_geometries:
+      g_toluene: gmtkn55_FH51:toluene
+      g_H2: gmtkn55_FH51:H2
+      g_methylcyclohexane: gmtkn55_FH51:methylcyclohexane
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "7"
+  shortname: "7"
+  geometry: "gmtkn55_FH51:pentanol"
+  reference_value: -63.89
+  setup:
+    reaction_formula: "1 g_pentanol + 1 g_H2O2 -> 1 g_C4H9CHO + 2 g_H2O"
+    reaction_geometries:
+      g_pentanol: gmtkn55_FH51:pentanol
+      g_H2O2: gmtkn55_FH51:H2O2
+      g_C4H9CHO: gmtkn55_FH51:C4H9CHO
+      g_H2O: gmtkn55_FH51:H2O
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "8"
+  shortname: "8"
+  geometry: "gmtkn55_FH51:C2H5O_2"
+  reference_value: -58.53
+  setup:
+    reaction_formula: "1 g_C2H5O_2 -> 1 g_C2H4OH_2"
+    reaction_geometries:
+      g_C2H5O_2: gmtkn55_FH51:C2H5O_2
+      g_C2H4OH_2: gmtkn55_FH51:C2H4OH_2
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "9"
+  shortname: "9"
+  geometry: "gmtkn55_FH51:3-hexene"
+  reference_value: -56.64
+  setup:
+    reaction_formula: "1 g_3-hexene + 1 g_H2O2 -> 1 g_diethyloxirane + 1 g_H2O"
+    reaction_geometries:
+      g_3-hexene: gmtkn55_FH51:3-hexene
+      g_H2O2: gmtkn55_FH51:H2O2
+      g_diethyloxirane: gmtkn55_FH51:diethyloxirane
+      g_H2O: gmtkn55_FH51:H2O
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "10"
+  shortname: "10"
+  geometry: "gmtkn55_FH51:S_C2H5_2"
+  reference_value: -52.85
+  setup:
+    reaction_formula: "1 g_S_C2H5_2 + 1 g_H2O2 -> 1 g_OS_C2H5_2 + 1 g_H2O"
+    reaction_geometries:
+      g_S_C2H5_2: gmtkn55_FH51:S_C2H5_2
+      g_H2O2: gmtkn55_FH51:H2O2
+      g_OS_C2H5_2: gmtkn55_FH51:OS_C2H5_2
+      g_H2O: gmtkn55_FH51:H2O
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "11"
+  shortname: "11"
+  geometry: "gmtkn55_FH51:ax-methylcyclohexene"
+  reference_value: -52.60
+  setup:
+    reaction_formula: "1 g_ax-methylcyclohexene -> 1 g_eq-methylcyclohexene"
+    reaction_geometries:
+      g_ax-methylcyclohexene: gmtkn55_FH51:ax-methylcyclohexene
+      g_eq-methylcyclohexene: gmtkn55_FH51:eq-methylcyclohexene
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "12"
+  shortname: "12"
+  geometry: "gmtkn55_FH51:hexyne"
+  reference_value: -46.72
+  setup:
+    reaction_formula: "1 g_hexyne + 1 g_H2 -> 1 g_1-hexene"
+    reaction_geometries:
+      g_hexyne: gmtkn55_FH51:hexyne
+      g_H2: gmtkn55_FH51:H2
+      g_1-hexene: gmtkn55_FH51:1-hexene
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "13"
+  shortname: "13"
+  geometry: "gmtkn55_FH51:2-pentyne"
+  reference_value: -44.82
+  setup:
+    reaction_formula: "1 g_2-pentyne + 1 g_H2 -> 1 g_trans-2-pentene"
+    reaction_geometries:
+      g_2-pentyne: gmtkn55_FH51:2-pentyne
+      g_H2: gmtkn55_FH51:H2
+      g_trans-2-pentene: gmtkn55_FH51:trans-2-pentene
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "14"
+  shortname: "14"
+  geometry: "gmtkn55_FH51:2-pentyne"
+  reference_value: -43.67
+  setup:
+    reaction_formula: "1 g_2-pentyne + 1 g_H2 -> 1 g_cis-2-pentene"
+    reaction_geometries:
+      g_2-pentyne: gmtkn55_FH51:2-pentyne
+      g_H2: gmtkn55_FH51:H2
+      g_cis-2-pentene: gmtkn55_FH51:cis-2-pentene
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "15"
+  shortname: "15"
+  geometry: "gmtkn55_FH51:2-pentyne"
+  reference_value: -42.89
+  setup:
+    reaction_formula: "1 g_2-pentyne + 1 g_HCN -> 1 g_C2H5CCNCHCH3"
+    reaction_geometries:
+      g_2-pentyne: gmtkn55_FH51:2-pentyne
+      g_HCN: gmtkn55_FH51:HCN
+      g_C2H5CCNCHCH3: gmtkn55_FH51:C2H5CCNCHCH3
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "16"
+  shortname: "16"
+  geometry: "gmtkn55_FH51:1-hexene"
+  reference_value: -37.08
+  setup:
+    reaction_formula: "1 g_1-hexene + 1 g_H2 -> 1 g_n-hexane"
+    reaction_geometries:
+      g_1-hexene: gmtkn55_FH51:1-hexene
+      g_H2: gmtkn55_FH51:H2
+      g_n-hexane: gmtkn55_FH51:n-hexane
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "17"
+  shortname: "17"
+  geometry: "gmtkn55_FH51:1-pentyne"
+  reference_value: -34.93
+  setup:
+    reaction_formula: "1 g_1-pentyne + 1 g_H2O -> 1 g_C4H9CHO"
+    reaction_geometries:
+      g_1-pentyne: gmtkn55_FH51:1-pentyne
+      g_H2O: gmtkn55_FH51:H2O
+      g_C4H9CHO: gmtkn55_FH51:C4H9CHO
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "18"
+  shortname: "18"
+  geometry: "gmtkn55_FH51:C3H7NH2"
+  reference_value: -32.47
+  setup:
+    reaction_formula: "2 g_C3H7NH2 + 1 g_COCl2 -> 1 g_CO_2NHC3H7_2 + 2 g_HCl"
+    reaction_geometries:
+      g_C3H7NH2: gmtkn55_FH51:C3H7NH2
+      g_COCl2: gmtkn55_FH51:COCl2
+      g_CO_2NHC3H7_2: gmtkn55_FH51:CO_2NHC3H7_2
+      g_HCl: gmtkn55_FH51:HCl
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "19"
+  shortname: "19"
+  geometry: "gmtkn55_FH51:eq-methylcyclohexene"
+  reference_value: -32.10
+  setup:
+    reaction_formula: "1 g_eq-methylcyclohexene + 1 g_H2 -> 1 g_methylcyclohexane"
+    reaction_geometries:
+      g_eq-methylcyclohexene: gmtkn55_FH51:eq-methylcyclohexene
+      g_H2: gmtkn55_FH51:H2
+      g_methylcyclohexane: gmtkn55_FH51:methylcyclohexane
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "20"
+  shortname: "20"
+  geometry: "gmtkn55_FH51:trans-2-pentene"
+  reference_value: -31.22
+  setup:
+    reaction_formula: "1 g_trans-2-pentene + 1 g_Cl2 -> 1 g_C2H5CClCHCH3 + 1 g_HCl"
+    reaction_geometries:
+      g_trans-2-pentene: gmtkn55_FH51:trans-2-pentene
+      g_Cl2: gmtkn55_FH51:Cl2
+      g_C2H5CClCHCH3: gmtkn55_FH51:C2H5CClCHCH3
+      g_HCl: gmtkn55_FH51:HCl
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "21"
+  shortname: "21"
+  geometry: "gmtkn55_FH51:2-pentyne"
+  reference_value: -29.98
+  setup:
+    reaction_formula: "1 g_2-pentyne + 1 g_HCl -> 1 g_C2H5CClCHCH3"
+    reaction_geometries:
+      g_2-pentyne: gmtkn55_FH51:2-pentyne
+      g_HCl: gmtkn55_FH51:HCl
+      g_C2H5CClCHCH3: gmtkn55_FH51:C2H5CClCHCH3
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "22"
+  shortname: "22"
+  geometry: "gmtkn55_FH51:1-pentene"
+  reference_value: -25.84
+  setup:
+    reaction_formula: "1 g_1-pentene + 1 g_ethene -> 1 g_Heptene"
+    reaction_geometries:
+      g_1-pentene: gmtkn55_FH51:1-pentene
+      g_ethene: gmtkn55_FH51:ethene
+      g_Heptene: gmtkn55_FH51:Heptene
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "23"
+  shortname: "23"
+  geometry: "gmtkn55_FH51:C4H9CHO"
+  reference_value: -23.47
+  setup:
+    reaction_formula: "1 g_C4H9CHO + 1 g_H2 -> 1 g_pentanol"
+    reaction_geometries:
+      g_C4H9CHO: gmtkn55_FH51:C4H9CHO
+      g_H2: gmtkn55_FH51:H2
+      g_pentanol: gmtkn55_FH51:pentanol
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "24"
+  shortname: "24"
+  geometry: "gmtkn55_FH51:dimethyloxirane"
+  reference_value: -22.45
+  setup:
+    reaction_formula: "1 g_dimethyloxirane + 1 g_H2O -> 1 g_butanediol"
+    reaction_geometries:
+      g_dimethyloxirane: gmtkn55_FH51:dimethyloxirane
+      g_H2O: gmtkn55_FH51:H2O
+      g_butanediol: gmtkn55_FH51:butanediol
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "25"
+  shortname: "25"
+  geometry: "gmtkn55_FH51:methylpyridine"
+  reference_value: -20.27
+  setup:
+    reaction_formula: "1 g_methylpyridine + 1 g_H2 -> 1 g_dimethylpyrrole"
+    reaction_geometries:
+      g_methylpyridine: gmtkn55_FH51:methylpyridine
+      g_H2: gmtkn55_FH51:H2
+      g_dimethylpyrrole: gmtkn55_FH51:dimethylpyrrole
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "26"
+  shortname: "26"
+  geometry: "gmtkn55_FH51:C4H9NCO"
+  reference_value: -19.72
+  setup:
+    reaction_formula: "1 g_C4H9NCO + 1 g_NH3 -> 1 g_C4H9NHCONH2"
+    reaction_geometries:
+      g_C4H9NCO: gmtkn55_FH51:C4H9NCO
+      g_NH3: gmtkn55_FH51:NH3
+      g_C4H9NHCONH2: gmtkn55_FH51:C4H9NHCONH2
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "27"
+  shortname: "27"
+  geometry: "gmtkn55_FH51:C3H7CN"
+  reference_value: -19.34
+  setup:
+    reaction_formula: "1 g_C3H7CN + 1 g_H2O -> 1 g_C3H7CONH2"
+    reaction_geometries:
+      g_C3H7CN: gmtkn55_FH51:C3H7CN
+      g_H2O: gmtkn55_FH51:H2O
+      g_C3H7CONH2: gmtkn55_FH51:C3H7CONH2
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "28"
+  shortname: "28"
+  geometry: "gmtkn55_FH51:propylfuran"
+  reference_value: -19.45
+  setup:
+    reaction_formula: "1 g_propylfuran + 1 g_H2S -> 1 g_propylthiophene + 1 g_H2O"
+    reaction_geometries:
+      g_propylfuran: gmtkn55_FH51:propylfuran
+      g_H2S: gmtkn55_FH51:H2S
+      g_propylthiophene: gmtkn55_FH51:propylthiophene
+      g_H2O: gmtkn55_FH51:H2O
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "29"
+  shortname: "29"
+  geometry: "gmtkn55_FH51:diethylamine"
+  reference_value: -17.39
+  setup:
+    reaction_formula: "1 g_diethylamine + 1 g_CO -> 1 g_HCON_C2H5_2"
+    reaction_geometries:
+      g_diethylamine: gmtkn55_FH51:diethylamine
+      g_CO: gmtkn55_FH51:CO
+      g_HCON_C2H5_2: gmtkn55_FH51:HCON_C2H5_2
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "30"
+  shortname: "30"
+  geometry: "gmtkn55_FH51:C3H7NCO"
+  reference_value: -16.98
+  setup:
+    reaction_formula: "1 g_C3H7NCO + 1 g_H2O -> 1 g_C3H7NH2 + 1 g_CO2"
+    reaction_geometries:
+      g_C3H7NCO: gmtkn55_FH51:C3H7NCO
+      g_H2O: gmtkn55_FH51:H2O
+      g_C3H7NH2: gmtkn55_FH51:C3H7NH2
+      g_CO2: gmtkn55_FH51:CO2
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "31"
+  shortname: "31"
+  geometry: "gmtkn55_FH51:C3H7CO2C2H3"
+  reference_value: -16.14
+  setup:
+    reaction_formula: "1 g_C3H7CO2C2H3 -> 1 g_ethyl-g-butyrolactone"
+    reaction_geometries:
+      g_C3H7CO2C2H3: gmtkn55_FH51:C3H7CO2C2H3
+      g_ethyl-g-butyrolactone: gmtkn55_FH51:ethyl-g-butyrolactone
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "32"
+  shortname: "32"
+  geometry: "gmtkn55_FH51:H2C-C5-CH2"
+  reference_value: -14.30
+  setup:
+    reaction_formula: "1 g_H2C-C5-CH2 -> 1 g_heptatriyne"
+    reaction_geometries:
+      g_H2C-C5-CH2: gmtkn55_FH51:H2C-C5-CH2
+      g_heptatriyne: gmtkn55_FH51:heptatriyne
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "33"
+  shortname: "33"
+  geometry: "gmtkn55_FH51:methylpyrazole"
+  reference_value: -13.14
+  setup:
+    reaction_formula: "1 g_methylpyrazole -> 1 g_methylimidazole"
+    reaction_geometries:
+      g_methylpyrazole: gmtkn55_FH51:methylpyrazole
+      g_methylimidazole: gmtkn55_FH51:methylimidazole
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "34"
+  shortname: "34"
+  geometry: "gmtkn55_FH51:1-pentene"
+  reference_value: -11.68
+  setup:
+    reaction_formula: "1 g_1-pentene + 1 g_H2O -> 1 g_pentanol"
+    reaction_geometries:
+      g_1-pentene: gmtkn55_FH51:1-pentene
+      g_H2O: gmtkn55_FH51:H2O
+      g_pentanol: gmtkn55_FH51:pentanol
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "35"
+  shortname: "35"
+  geometry: "gmtkn55_FH51:methylfuran"
+  reference_value: -10.70
+  setup:
+    reaction_formula: "1 g_methylfuran + 1 g_NH3 -> 1 g_methylpyrrole + 1 g_H2O"
+    reaction_geometries:
+      g_methylfuran: gmtkn55_FH51:methylfuran
+      g_NH3: gmtkn55_FH51:NH3
+      g_methylpyrrole: gmtkn55_FH51:methylpyrrole
+      g_H2O: gmtkn55_FH51:H2O
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "36"
+  shortname: "36"
+  geometry: "gmtkn55_FH51:C3H7CHCO"
+  reference_value: -9.39
+  setup:
+    reaction_formula: "1 g_C3H7CHCO + 1 g_H2CO -> 1 g_propyloxirane + 1 g_CO"
+    reaction_geometries:
+      g_C3H7CHCO: gmtkn55_FH51:C3H7CHCO
+      g_H2CO: gmtkn55_FH51:H2CO
+      g_propyloxirane: gmtkn55_FH51:propyloxirane
+      g_CO: gmtkn55_FH51:CO
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "37"
+  shortname: "37"
+  geometry: "gmtkn55_FH51:pentanol"
+  reference_value: -8.53
+  setup:
+    reaction_formula: "1 g_pentanol + 1 g_CO -> 1 g_HCO2C5H11"
+    reaction_geometries:
+      g_pentanol: gmtkn55_FH51:pentanol
+      g_CO: gmtkn55_FH51:CO
+      g_HCO2C5H11: gmtkn55_FH51:HCO2C5H11
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "38"
+  shortname: "38"
+  geometry: "gmtkn55_FH51:C3H7S_2"
+  reference_value: -6.63
+  setup:
+    reaction_formula: "1 g_C3H7S_2 + 1 g_H2 -> 2 g_C3H7SH"
+    reaction_geometries:
+      g_C3H7S_2: gmtkn55_FH51:C3H7S_2
+      g_H2: gmtkn55_FH51:H2
+      g_C3H7SH: gmtkn55_FH51:C3H7SH
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "39"
+  shortname: "39"
+  geometry: "gmtkn55_FH51:pentadiene"
+  reference_value: -6.65
+  setup:
+    reaction_formula: "1 g_ax-methylcyclohexene -> 1 g_pentadiene + 1 g_ethene"
+    reaction_geometries:
+      g_pentadiene: gmtkn55_FH51:pentadiene
+      g_ethene: gmtkn55_FH51:ethene
+      g_ax-methylcyclohexene: gmtkn55_FH51:ax-methylcyclohexene
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "40"
+  shortname: "40"
+  geometry: "gmtkn55_FH51:hexandione"
+  reference_value: -6.45
+  setup:
+    reaction_formula: "1 g_hexandione -> 1 g_methyl-d-valerolactone"
+    reaction_geometries:
+      g_hexandione: gmtkn55_FH51:hexandione
+      g_methyl-d-valerolactone: gmtkn55_FH51:methyl-d-valerolactone
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "41"
+  shortname: "41"
+  geometry: "gmtkn55_FH51:C2H5CO2H"
+  reference_value: -5.11
+  setup:
+    reaction_formula: "1 g_C2H5CO2H + 1 g_methanol -> 1 g_C2H5CO2CH3 + 1 g_H2O"
+    reaction_geometries:
+      g_C2H5CO2H: gmtkn55_FH51:C2H5CO2H
+      g_methanol: gmtkn55_FH51:methanol
+      g_C2H5CO2CH3: gmtkn55_FH51:C2H5CO2CH3
+      g_H2O: gmtkn55_FH51:H2O
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "42"
+  shortname: "42"
+  geometry: "gmtkn55_FH51:C4H9ONO"
+  reference_value: -3.25
+  setup:
+    reaction_formula: "1 g_C4H9ONO -> 1 g_C4H9NO2"
+    reaction_geometries:
+      g_C4H9ONO: gmtkn55_FH51:C4H9ONO
+      g_C4H9NO2: gmtkn55_FH51:C4H9NO2
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "43"
+  shortname: "43"
+  geometry: "gmtkn55_FH51:n-hexane"
+  reference_value: -2.64
+  setup:
+    reaction_formula: "1 g_n-hexane -> 1 g_neo-hexane"
+    reaction_geometries:
+      g_n-hexane: gmtkn55_FH51:n-hexane
+      g_neo-hexane: gmtkn55_FH51:neo-hexane
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "44"
+  shortname: "44"
+  geometry: "gmtkn55_FH51:methylcyclohexa-1,4-diene"
+  reference_value: -2.48
+  setup:
+    reaction_formula: "1 g_methylcyclohexa-1,4-diene -> 1 g_methylcyclohexa-1,3-diene"
+    reaction_geometries:
+      g_methylcyclohexa-1,4-diene: gmtkn55_FH51:methylcyclohexa-1,4-diene
+      g_methylcyclohexa-1,3-diene: gmtkn55_FH51:methylcyclohexa-1,3-diene
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "45"
+  shortname: "45"
+  geometry: "gmtkn55_FH51:1-pentene"
+  reference_value: -2.11
+  setup:
+    reaction_formula: "1 g_1-pentene -> 1 g_trans-2-pentene"
+    reaction_geometries:
+      g_1-pentene: gmtkn55_FH51:1-pentene
+      g_trans-2-pentene: gmtkn55_FH51:trans-2-pentene
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "46"
+  shortname: "46"
+  geometry: "gmtkn55_FH51:toluene"
+  reference_value: -1.47
+  setup:
+    reaction_formula: "1 g_toluene + 1 g_H2 -> 1 g_methylcyclohexa-1,3-diene"
+    reaction_geometries:
+      g_toluene: gmtkn55_FH51:toluene
+      g_H2: gmtkn55_FH51:H2
+      g_methylcyclohexa-1,3-diene: gmtkn55_FH51:methylcyclohexa-1,3-diene
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "47"
+  shortname: "47"
+  geometry: "gmtkn55_FH51:cis-2-pentene"
+  reference_value: -1.15
+  setup:
+    reaction_formula: "1 g_cis-2-pentene -> 1 g_trans-2-pentene"
+    reaction_geometries:
+      g_cis-2-pentene: gmtkn55_FH51:cis-2-pentene
+      g_trans-2-pentene: gmtkn55_FH51:trans-2-pentene
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "48"
+  shortname: "48"
+  geometry: "gmtkn55_FH51:3-methylpentane"
+  reference_value: -0.86
+  setup:
+    reaction_formula: "1 g_3-methylpentane -> 1 g_dimethylbutane"
+    reaction_geometries:
+      g_3-methylpentane: gmtkn55_FH51:3-methylpentane
+      g_dimethylbutane: gmtkn55_FH51:dimethylbutane
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "49"
+  shortname: "49"
+  geometry: "gmtkn55_FH51:C2H5CO2H"
+  reference_value: -0.43
+  setup:
+    reaction_formula: "1 g_C2H5CO2H + 1 g_NH3 -> 1 g_C2H5CONH2 + 1 g_H2O"
+    reaction_geometries:
+      g_C2H5CO2H: gmtkn55_FH51:C2H5CO2H
+      g_NH3: gmtkn55_FH51:NH3
+      g_C2H5CONH2: gmtkn55_FH51:C2H5CONH2
+      g_H2O: gmtkn55_FH51:H2O
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "50"
+  shortname: "50"
+  geometry: "gmtkn55_FH51:n-nonane"
+  reference_value: -0.41
+  setup:
+    reaction_formula: "1 g_n-nonane -> 1 g_tetramethylpentane"
+    reaction_geometries:
+      g_n-nonane: gmtkn55_FH51:n-nonane
+      g_tetramethylpentane: gmtkn55_FH51:tetramethylpentane
+  tags: ""
+
+- !ruby/object:ProtocolDataset::DataSetItem
+  name: "51"
+  shortname: "51"
+  geometry: "gmtkn55_FH51:C3H7CO2H"
+  reference_value: -0.18
+  setup:
+    reaction_formula: "1 g_C3H7CO2H + 1 g_NH3 -> 1 g_C3H7CONH2 + 1 g_H2O"
+    reaction_geometries:
+      g_C3H7CO2H: gmtkn55_FH51:C3H7CO2H
+      g_NH3: gmtkn55_FH51:NH3
+      g_C3H7CONH2: gmtkn55_FH51:C3H7CONH2
+      g_H2O: gmtkn55_FH51:H2O
+  tags: ""
