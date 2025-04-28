@@ -1,0 +1,3 @@
+The structures in this folder are from PBE+D3 optimization.
+The distance between CO and the MgO surface, d(Mg-CO), is slightly shorter than 2.460 Å, the value used in the main text for comparing different methods.
+When using these structures, one therefore should manually shift the CO molecule along the c direction to adjust d(Mg-CO) to the desired value.
