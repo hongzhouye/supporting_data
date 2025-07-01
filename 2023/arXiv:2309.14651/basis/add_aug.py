@@ -3,6 +3,7 @@ import numpy as np
 from pyscf import lib
 
 def load_basis1(fbas, atm, unc=False):
+    import os
     from pyscf import gto
     from pyscf.pbc import gto as pbcgto
     if 'ghost' in atm.lower():
