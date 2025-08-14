@@ -1,5 +1,9 @@
 # Supporting data
 
+## 2025
+  - **Unphysical Solutions in Coupled-Cluster-Based Random Phase Approximation and How to Avoid Them**: [published](TBF), [arXiv](TBF), [data](https://github.com/hongzhouye/supporting_data/tree/main/2025/RPA_Stability)
+
+
 ## 2024
   - **Efficient Implementation of the Random Phase Approximation with Domain-Based Local Pair Natural Orbitals**: [published](https://pubs.acs.org/doi/full/10.1021/acs.jctc.4c01540), [arXiv](https://arxiv.org/abs/2411.07352), [data](https://github.com/hongzhouye/supporting_data/tree/main/2024/DLPNO_RPA)
 
