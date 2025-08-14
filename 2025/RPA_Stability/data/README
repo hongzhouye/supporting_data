@@ -1,0 +1,5 @@
+Each directory contains:
+1. reference AC-RPA energy
+2. full drCCD energy convergence
+3. factorized drCCD energy convergence
+4. maximum eigenvalue of T^{\dagger} T
