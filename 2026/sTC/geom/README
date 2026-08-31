@@ -1,0 +1,14 @@
+For HF exchange FSE benchmarks, the following geometries are used:
+
+	- Diamond: C/1.000.vasp
+	- Silicon: Si/1.000.vasp
+	- h-BN: hBN/1.000.vasp
+	- Lithium: Li/1.000.vasp
+	- Aluminum: Al/1.000.vasp
+
+The same geometry of diamond is also used for band structure calculations.
+For the diamond equation of state, all geometries in the "C" folder are
+used, which corresponds to scanning the cell volume from 90% to 110% of
+"C/1.000.vasp".
+
+The three molecular crystals can be found in "molcrys" folder.
